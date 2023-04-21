@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Lidz nakamai dzimsanas-dienai</title>
+</head>
+<body>
+<h1>Lidz nakamai dzimsanas-dienai</h1>
+<hr color="red" size="10" width="100%">
+<form>
+<p>Ievadi dzimsanas-datumu:</p>
+<p>Menesis: <input type="text" id="dzMenesis"></p>
+<p>Diena: <input type="text" id="dzDiena"></p>
+<button type="button" onclick="dienas()">Izrekinat, cik lidz nakamai dzimsanas-dienai</button>
+<p>Lidz dzimsanas-dienai palicis: <span id="palicis"></span></p>
+</form>
+<script>
+function dienas() {
+  var sodiena = new Date();
+  var dzMenesis = document.getElementById("dzMenesis").value;
+  var dzDiena = document.getElementById("dzDiena").value;
+  var nakamaDZ = new Date(sodiena.getFullYear(), dzMenesis - 1, dzDiena);
+  if (nakamaDZ < sodiena) {
+    nakamaDZ.setFullYear(nakamaDZ.getFullYear() + 1);
+  }
+  var palicis = Math.ceil((nakamaDZ - sodiena) / (1000 * 60 * 60 * 24));
+  document.getElementById("palicis").innerHTML = palicis;
+}
+</script>
+</body>
+</html>
