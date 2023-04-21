@@ -1,0 +1,77 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Feb 24, 2023, 12:01:42 PM
+    Author     : vzilberts2
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: url("https://repository-images.githubusercontent.com/473911312/7dc22a67-6ff9-45cd-8985-eca4dd333a36") repeat;
+  background-size: contain;
+  padding: 20px;
+}
+nav h2 {
+  margin-top: 0;
+}
+nav ol {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
